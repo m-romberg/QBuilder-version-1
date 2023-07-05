@@ -12,7 +12,7 @@ import './StartPage.css';
  * state:
  *    - none
  *
- * StartPage => StartButton
+ * SalesAssistant => StartPage => StartButton
  */
 function StartPage() {
   return (
