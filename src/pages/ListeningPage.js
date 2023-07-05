@@ -5,10 +5,10 @@ import './ListeningPage.css';
  * ListeningPage
  *
  * Prompts the user that it is recording.
- * Renders button to stop and submit recording.
+ * Renders button to stop and submit recording to Whisper API.
  *
  * props:
- *    - stopRecord: fn to stop recording
+ *    - stopRecord: fn to stop recording and send to whisper API
  *
  * state:
  *    - none
