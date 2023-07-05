@@ -4,10 +4,10 @@ import './StartButton.css';
 /**
  * StartButton
  *
- * Ends audio recording and sends audio file to API
+ * Starts audio recording
  *
  * props:
- *    - stopRecord: fn to stop recording and send audio to API
+ *    - record: fn to start recording audio
  *
  * state:
  *    - none
