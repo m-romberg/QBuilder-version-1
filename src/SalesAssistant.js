@@ -13,7 +13,7 @@ import './SalesAssistant.css';
  * questions: [], questions for sales assistant
  * solution: {solution: {timeline, cost, details}
  *
- * SalesAssistant => {StartPage, ListeningPage, QuestionsPage, SolutionPage}
+ * RoutesList => SalesAssistant => {StartPage, ListeningPage, QuestionsPage, SolutionPage}
  */
 function SalesAssistant() {
   return (
