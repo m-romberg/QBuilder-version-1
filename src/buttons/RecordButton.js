@@ -17,10 +17,14 @@ import './RecordButton.css';
 function RecordButton({ record }) {
   console.debug("inside RecordButton");
   return (
-    <Container className="RecordButton">
+    <Container className="RecordButton" >
       <Row>
         <Col>
-          <Button onClick={record}>
+          <Button
+            onClick={record}
+            className="RecordButton Button rounded-circle"
+            variant="success"
+            >
             Start Assistant
           </Button>
         </Col>
