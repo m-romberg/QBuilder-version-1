@@ -20,7 +20,10 @@ function StopButton({ stopRecord }) {
     <Container className="StopButton">
       <Row>
         <Col>
-          <Button onClick={stopRecord}>
+          <Button
+            onClick={stopRecord}
+            className="StopButton Button rounded-circle"
+            variant="danger">
             Stop Assistant
           </Button>
         </Col>
