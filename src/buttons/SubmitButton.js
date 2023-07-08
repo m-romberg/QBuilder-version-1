@@ -21,7 +21,10 @@ function SubmitButton({ requestSolution }) {
     <Container className="SubmitButton">
       <Row>
         <Col>
-          <Button onClick={requestSolution}>
+          <Button
+          onClick={requestSolution}
+          className="SubmitButton-button"
+          >
             Request Sales Solution
           </Button>
         </Col>
