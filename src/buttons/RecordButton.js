@@ -14,16 +14,16 @@ import './RecordButton.css';
  *
  * {StartPage, QuestionsPage} => RecordButton
  */
-function RecordButton({record}) {
+function RecordButton({ record }) {
   return (
     <Container className="RecordButton">
-    <Row>
-    <Col>
-    <Button onClick={record}>
-    Start Assistant
-    </Button>
-    </Col>
-    </Row>
+      <Row>
+        <Col>
+          <Button onClick={record}>
+            Start Assistant
+          </Button>
+        </Col>
+      </Row>
     </Container>
   );
 }
