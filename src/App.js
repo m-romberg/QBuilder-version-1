@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
 import RecordButton from "./buttons/RecordButton";
+import StopButton from "./buttons/StopButton";
 
 /**
  * App
@@ -18,15 +19,19 @@ function App() {
   /**Function to access microphone and start recording */
   function record () {
     console.debug("inside record");
-    return ;
+  }
+
+  /**Function to stop access microphone and send off recording */
+  function stopRecord () {
+    console.debug("inside stopRecord");
   }
 
   return (
     <Container className="App">
       <Row>
         <Col>
-        <RecordButton record={record}>
-        </RecordButton>
+        <RecordButton record={record}/>
+        <StopButton stooRecord={stopRecord}/>
         </Col>
       </Row>
     </Container>
