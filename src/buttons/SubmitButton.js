@@ -16,6 +16,7 @@ import './SubmitButton.css';
  */
 
 function SubmitButton({ requestSolution }) {
+  console.debug("inside SubmitButton");
   return (
     <Container className="SubmitButton">
       <Row>

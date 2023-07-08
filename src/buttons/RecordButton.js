@@ -15,6 +15,7 @@ import './RecordButton.css';
  * {StartPage, QuestionsPage} => RecordButton
  */
 function RecordButton({ record }) {
+  console.debug("inside RecordButton");
   return (
     <Container className="RecordButton">
       <Row>

@@ -15,6 +15,7 @@ import './StopButton.css';
  * ListeningPage => StopButton
  */
 function StopButton({ stopRecord }) {
+  console.debug("inside StopButton");
   return (
     <Container className="StopButton">
       <Row>
