@@ -1,5 +1,5 @@
+import { Container, Row, Col, Button } from "react-bootstrap";
 import './StopButton.css';
-
 
 /**
  * StopButton
@@ -14,10 +14,21 @@ import './StopButton.css';
  *
  * ListeningPage => StopButton
  */
-function StopButton() {
+function StopButton({ stopRecord }) {
+  console.debug("inside StopButton");
   return (
-    <div className="StopButton">
-    </div>
+    <Container className="StopButton">
+      <Row>
+        <Col>
+          <Button
+            onClick={stopRecord}
+            className="StopButton Button rounded-circle"
+            variant="danger">
+            Stop Assistant
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

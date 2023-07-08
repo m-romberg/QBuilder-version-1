@@ -1,5 +1,5 @@
+import { Container, Row, Col, Button } from "react-bootstrap";
 import './SubmitButton.css';
-
 
 /**
  * SubmitButton
@@ -7,17 +7,29 @@ import './SubmitButton.css';
  * Requests a solution from the QBuilder API
  *
  * props:
- *    - submit: fn to call API
+ *    - requestSolution: fn to call API for sales solution
  *
  * state:
  *    - none
  *
  * QuestionPage => SubmitButton
  */
-function SubmitButton() {
+
+function SubmitButton({ requestSolution }) {
+  console.debug("inside SubmitButton");
   return (
-    <div className="SubmitButton">
-    </div>
+    <Container className="SubmitButton">
+      <Row>
+        <Col>
+          <Button
+          onClick={requestSolution}
+          className="SubmitButton-button"
+          >
+            Request Sales Solution
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
