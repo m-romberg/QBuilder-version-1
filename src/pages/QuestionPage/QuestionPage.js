@@ -30,12 +30,12 @@ function QuestionPage({ questions, record, submit }) {
         </Col>
       </Row>
       <Row>
-      <Col>
-      <RecordButton record={record} />
-      </Col>
-      <Col>
-      <SubmitButton requestSolution={submit} />
-      </Col>
+        <Col>
+          <RecordButton record={record} />
+        </Col>
+        <Col>
+          <SubmitButton requestSolution={submit} />
+        </Col>
       </Row>
     </Container>
   );
