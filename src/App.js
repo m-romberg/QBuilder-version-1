@@ -3,6 +3,7 @@ import './App.css';
 import RecordButton from "./buttons/RecordButton";
 import StopButton from "./buttons/StopButton";
 import SubmitButton from "./buttons/SubmitButton";
+import Header from "./Header";
 
 /**
  * App
@@ -35,6 +36,11 @@ function App() {
 
   return (
     <Container className="App">
+      <Row>
+        <Col>
+          <Header />
+        </Col>
+      </Row>
       <Row>
         <Col>
         <RecordButton record={record}/>
