@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
 import Header from "./Header";
 import StartPage from "./pages/StartPage";
+import ListeningPage from "./pages/ListeningPage";
 
 /**
  * App
@@ -41,6 +42,7 @@ function App() {
       </Row>
       <Row>
         <Col>
+        <ListeningPage />
         </Col>
       </Row>
     </Container>
