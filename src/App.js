@@ -1,9 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
-import RecordButton from "./buttons/RecordButton";
-import StopButton from "./buttons/StopButton";
-import SubmitButton from "./buttons/SubmitButton";
 import Header from "./Header";
+import StartPage from "./pages/StartPage";
 
 /**
  * App
@@ -35,7 +33,7 @@ function App() {
 
 
   return (
-    <Container className="App">
+    <Container className="App d-grid gap-5">
       <Row>
         <Col>
           <Header />
@@ -43,9 +41,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <RecordButton record={record}/>
-        <StopButton stopRecord={stopRecord}/>
-        <SubmitButton requestSolution={requestSolution} />
         </Col>
       </Row>
     </Container>
