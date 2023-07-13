@@ -22,16 +22,16 @@ function Questions({ questions }) {
   return (
     <Container className="Questions">
       <Row>
-      {!topThreeQuestions &&
-        <Col>
-         <h2>No More Questions.</h2>
-        </Col>
-      }
-      {topThreeQuestions &&
-        <Col>
-         <h2>Questions</h2>
-        </Col>
-      }
+        {!topThreeQuestions &&
+          <Col>
+            <h2>No More Questions.</h2>
+          </Col>
+        }
+        {topThreeQuestions &&
+          <Col>
+            <h2>Questions</h2>
+          </Col>
+        }
       </Row>
       <Row>
         {topThreeQuestions && <Col>

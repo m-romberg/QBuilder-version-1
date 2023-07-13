@@ -33,11 +33,11 @@ function QuestionPage({ questions, record, submit }) {
         </Col>
       </Row>
       {!questions &&
-       <Row> <Col>
+        <Row> <Col>
           {noQuestionMessage}
         </Col>
         </Row>
-        }
+      }
       <Row>
         <Col>
           <RecordButton record={record} />
