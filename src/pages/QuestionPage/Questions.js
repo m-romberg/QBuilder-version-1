@@ -18,7 +18,6 @@ function Questions({ questions }) {
   console.debug("Inside Questions");
 
   const topThreeQuestions = questions?.slice(0, 3);
-  const noQuestionMessage = "Please restart the sales assistant for additional questions OR request a final solution.";
 
   return (
     <Container className="Questions">
@@ -39,10 +38,6 @@ function Questions({ questions }) {
           <ol>
             {topThreeQuestions.map((q, i) => <li key={i}>{q}</li>)}
           </ol>
-        </Col>
-        }
-        {!topThreeQuestions && <Col>
-          {noQuestionMessage}
         </Col>
         }
       </Row>

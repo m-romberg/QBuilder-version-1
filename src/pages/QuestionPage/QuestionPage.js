@@ -22,6 +22,9 @@ import SubmitButton from "../../buttons/SubmitButton";
  */
 function QuestionPage({ questions, record, submit }) {
   console.debug("Inside QuestionPage");
+
+  const noQuestionMessage = "Please restart the sales assistant for additional questions OR request a final solution.";
+
   return (
     <Container className="QuestionPage">
       <Row>
@@ -29,6 +32,12 @@ function QuestionPage({ questions, record, submit }) {
           <Questions questions={questions} />
         </Col>
       </Row>
+      {!questions &&
+       <Row> <Col>
+          {noQuestionMessage}
+        </Col>
+        </Row>
+        }
       <Row>
         <Col>
           <RecordButton record={record} />
