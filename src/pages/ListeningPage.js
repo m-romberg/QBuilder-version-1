@@ -1,6 +1,6 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './ListeningPage.css';
-
-
+import StopButton from "../buttons/StopButton";
 /**
  * ListeningPage
  *
@@ -15,10 +15,20 @@ import './ListeningPage.css';
  *
  * SalesAssistant => ListeningPage => StopButton
  */
-function ListeningPage() {
+function ListeningPage({ stopRecord }) {
+  console.debug("inside ListeningPage");
+
+  const prompt = 'Click below to stop the recording and request assistance.';
+
   return (
-    <div className="ListeningPage">
-    </div>
+    <Container className="ListeningPage d-grid gap-5">
+      <Row className="ListeningPage ListeningPage-prompt p-2">
+        <Col> {prompt} </Col>
+      </Row>
+      <Row className="ListeningPage ListeningPage-btns p-2">
+        <Col> <StopButton /> </Col>
+      </Row>
+    </Container>
   );
 }
 
