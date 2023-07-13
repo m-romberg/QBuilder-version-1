@@ -41,7 +41,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-          <StartPage record={record} />
         </Col>
       </Row>
     </Container>
