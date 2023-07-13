@@ -19,11 +19,11 @@ function StartPage({ record }) {
 
   const prompt = 'Click below to start the sales assistant and begin recording.';
   return (
-    <Container className="StartPage">
-      <Row>
+    <Container className="StartPage d-grid gap-5">
+      <Row className="StartPage StartPage-prompt p-2">
         <Col> {prompt} </Col>
       </Row>
-      <Row>
+      <Row className="StartPage StartPage-btns p-2">
         <Col> <RecordButton record={record} /></Col>
       </Row>
     </Container>

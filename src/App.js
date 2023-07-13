@@ -33,7 +33,7 @@ function App() {
 
 
   return (
-    <Container className="App">
+    <Container className="App d-grid gap-5">
       <Row>
         <Col>
           <Header />
