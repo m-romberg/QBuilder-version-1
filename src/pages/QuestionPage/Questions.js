@@ -14,8 +14,10 @@ import './Questions.css';
  *
  * QuestionPage =>  Questions
  */
-function Questions() {
+function Questions({ questions }) {
   console.debug("Inside Questions");
+
+  const topThreeQuestions = questions.slice(0, 3);
 
   return (
     <div className="Questions">
