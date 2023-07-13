@@ -18,7 +18,7 @@ function Questions({ questions }) {
   console.debug("Inside Questions");
 
   const topThreeQuestions = questions?.slice(0, 3);
-  const noQuestionMessage = "No more questions. Please restart the sales assistant for additional questions or request a final solution."
+  const noQuestionMessage = "No more questions. Please restart the sales assistant for additional questions or request a final solution.";
 
   return (
     <Container className="Questions">
