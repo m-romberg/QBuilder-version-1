@@ -14,18 +14,18 @@ import RecordButton from "../buttons/RecordButton";
  *
  * SalesAssistant => StartPage => StartButton
  */
-function StartPage({record}) {
+function StartPage({ record }) {
   console.debug("inside StartPage");
 
   const prompt = 'Click below to start the sales assistant and begin recording.';
   return (
     <Container className="StartPage">
-    <Row>
-    <Col> {prompt} </Col>
-    </Row>
-    <Row>
-    <Col> <RecordButton record={record} /></Col>
-    </Row>
+      <Row>
+        <Col> {prompt} </Col>
+      </Row>
+      <Row>
+        <Col> <RecordButton record={record} /></Col>
+      </Row>
     </Container>
   );
 }
