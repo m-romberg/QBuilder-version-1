@@ -18,7 +18,9 @@ function Questions({ questions }) {
   console.debug("Inside Questions");
 
   // const topThreeQuestions = questions?.slice(0, 3);
-  const topThreeQuestions = ["This is question 1. This is question 1. This is question 1. This is question 1.", "This is question 2.", "This is question 3"];
+  const topThreeQuestions = ["What are the GPU needs? Please be specific as possible.",
+   "What is the budget range? One will be suggested at the end.",
+   "What is the time frame? "];
 
   return (
     <Container className="Questions d-grid gap-3">
@@ -29,20 +31,22 @@ function Questions({ questions }) {
           </Col>
         }
         {topThreeQuestions &&
-          <Col>
-            <h2>Top 3 Questions</h2>
+          <Col className="Questions-header">
+            <h3>
+            Based on the conversation so far... these are the most important questions to ask
+            </h3>
           </Col>
         }
       </Row>
       <Row>
-        <Col></Col>
+        <Col sm={1}></Col>
         {topThreeQuestions && <Col className="Questions-list">
           <ol>
             {topThreeQuestions.map((q, i) => <li key={i}>{q}</li>)}
           </ol>
         </Col>
         }
-        <Col></Col>
+        <Col sm={1}></Col>
       </Row>
     </Container>
   );

@@ -1,5 +1,8 @@
 .Questions {
     color: whitesmoke;
+    background-color: #929fae;
+    max-width: 50%;
+    border-radius: 25px;
 }
 
 .Questions-list{

@@ -23,7 +23,7 @@ import SubmitButton from "../../buttons/SubmitButton";
 function QuestionPage({ questions, record, submit }) {
   console.debug("Inside QuestionPage");
 
-  const noQuestionMessage = "Please restart ".concat(
+  const prompt = "Please restart ".concat(
     "the sales assistant for additional questions OR request a final solution."
   );
 
@@ -34,12 +34,10 @@ function QuestionPage({ questions, record, submit }) {
           <Questions questions={questions} />
         </Col>
       </Row>
-      {!questions &&
         <Row className="QuestionPage-prompt"> <Col>
-          {noQuestionMessage}
+          {prompt}
         </Col>
         </Row>
-      }
       <Row>
       <Col></Col>
         <Col>
