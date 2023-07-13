@@ -29,13 +29,13 @@ function QuestionPage({ questions, record, submit }) {
 
   return (
     <Container className="QuestionPage">
-      <Row>
+      <Row className="QuestionPage-questions">
         <Col>
           <Questions questions={questions} />
         </Col>
       </Row>
       {!questions &&
-        <Row> <Col>
+        <Row className="QuestionPage-prompt"> <Col>
           {noQuestionMessage}
         </Col>
         </Row>
