@@ -1,6 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './QuestionPage.css';
 import Questions from './Questions';
+import RecordButton from "../../buttons/RecordButton";
+import SubmitButton from "../../buttons/SubmitButton";
 
 /**
  * QuestionPage
@@ -18,15 +20,23 @@ import Questions from './Questions';
  *
  * SalesAssistant => QuestionPage => { StartButton, SubmitButton, Questions }
  */
-function QuestionPage() {
+function QuestionPage({ questions, record, submit }) {
   console.debug("Inside QuestionPage");
   return (
     <Container className="QuestionPage">
-    <Row>
-    <Col>
-    <Questions />
-    </Col>
-    </Row>
+      <Row>
+        <Col>
+          <Questions questions={questions} />
+        </Col>
+      </Row>
+      <Row>
+      <Col>
+      <RecordButton record={record} />
+      </Col>
+      <Col>
+      <SubmitButton requestSolution={submit} />
+      </Col>
+      </Row>
     </Container>
   );
 }
