@@ -17,10 +17,11 @@ import './Questions.css';
 function Questions({ questions }) {
   console.debug("Inside Questions");
 
-  const topThreeQuestions = questions?.slice(0, 3);
+  // const topThreeQuestions = questions?.slice(0, 3);
+  const topThreeQuestions = ["This is question 1. This is question 1. This is question 1. This is question 1.", "This is question 2.", "This is question 3"];
 
   return (
-    <Container className="Questions">
+    <Container className="Questions d-grid gap-3">
       <Row>
         {!topThreeQuestions &&
           <Col>
@@ -29,17 +30,19 @@ function Questions({ questions }) {
         }
         {topThreeQuestions &&
           <Col>
-            <h2>Questions</h2>
+            <h2>Top 3 Questions</h2>
           </Col>
         }
       </Row>
       <Row>
-        {topThreeQuestions && <Col>
+        <Col></Col>
+        {topThreeQuestions && <Col className="Questions-list">
           <ol>
             {topThreeQuestions.map((q, i) => <li key={i}>{q}</li>)}
           </ol>
         </Col>
         }
+        <Col></Col>
       </Row>
     </Container>
   );

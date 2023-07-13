@@ -28,7 +28,7 @@ function QuestionPage({ questions, record, submit }) {
   );
 
   return (
-    <Container className="QuestionPage">
+    <Container className="QuestionPage d-grid gap-5">
       <Row className="QuestionPage-questions">
         <Col>
           <Questions questions={questions} />
@@ -41,12 +41,14 @@ function QuestionPage({ questions, record, submit }) {
         </Row>
       }
       <Row>
+      <Col></Col>
         <Col>
           <RecordButton record={record} />
         </Col>
         <Col>
           <SubmitButton requestSolution={submit} />
         </Col>
+        <Col></Col>
       </Row>
     </Container>
   );

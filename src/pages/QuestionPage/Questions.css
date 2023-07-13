@@ -1,3 +1,7 @@
 .Questions {
     color: whitesmoke;
 }
+
+.Questions-list{
+    text-align: left;
+}
