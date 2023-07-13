@@ -1,6 +1,6 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './QuestionPage.css';
 import Questions from './Questions';
-
 
 /**
  * QuestionPage
@@ -21,10 +21,13 @@ import Questions from './Questions';
 function QuestionPage() {
   console.debug("Inside QuestionPage");
   return (
-    <div className="QuestionPage">
-    Question Page
+    <Container className="QuestionPage">
+    <Row>
+    <Col>
     <Questions />
-    </div>
+    </Col>
+    </Row>
+    </Container>
   );
 }
 
