@@ -42,7 +42,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <ListeningPage />
         </Col>
       </Row>
     </Container>
