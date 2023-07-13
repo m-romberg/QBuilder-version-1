@@ -17,6 +17,7 @@ import './StartPage.css';
 function StartPage() {
   return (
     <div className="StartPage">
+    StartPage
     </div>
   );
 }
