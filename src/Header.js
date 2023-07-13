@@ -19,9 +19,7 @@ function Header() {
     <Container className="Header">
       <Row>
         <Col>
-        <text>
-          QBuilder
-        </text>
+          <p>QBuilder</p>
         </Col>
       </Row>
     </Container>
