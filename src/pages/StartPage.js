@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './StartPage.css';
-
+import RecordButton from "../buttons/RecordButton";
 /**
  * StartPage
  *
@@ -14,12 +14,17 @@ import './StartPage.css';
  *
  * SalesAssistant => StartPage => StartButton
  */
-function StartPage() {
+function StartPage({record}) {
   console.debug("inside StartPage");
+
+  const prompt = 'Click below to start the sales assistant and begin recording.';
   return (
     <Container className="StartPage">
     <Row>
-    <Col>Start page</Col>
+    <Col> {prompt} </Col>
+    </Row>
+    <Row>
+    <Col> <RecordButton record={record} /></Col>
     </Row>
     </Container>
   );
