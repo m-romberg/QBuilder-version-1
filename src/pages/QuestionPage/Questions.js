@@ -1,5 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './Questions.css';
-
 
 /**
  * Questions
@@ -17,12 +17,24 @@ import './Questions.css';
 function Questions({ questions }) {
   console.debug("Inside Questions");
 
-  const topThreeQuestions = questions.slice(0, 3);
+  const topThreeQuestions = questions?.slice(0, 3);
 
   return (
-    <div className="Questions">
-    Questions
-    </div>
+    <Container className="Questions">
+    <Row>
+    <Col>
+    <h2>Questions</h2>
+    </Col>
+    </Row>
+      <Row>
+        <Col>
+        <ol>
+        {topThreeQuestions &&
+          topThreeQuestions.map((q,i) => <li key={i}>{q}</li>)}
+        </ol>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
