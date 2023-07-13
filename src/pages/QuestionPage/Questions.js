@@ -18,14 +18,21 @@ function Questions({ questions }) {
   console.debug("Inside Questions");
 
   const topThreeQuestions = questions?.slice(0, 3);
-  const noQuestionMessage = "No more questions. Please restart the sales assistant for additional questions or request a final solution.";
+  const noQuestionMessage = "Please restart the sales assistant for additional questions OR request a final solution.";
 
   return (
     <Container className="Questions">
       <Row>
+      {!topThreeQuestions &&
         <Col>
-          <h2>Questions</h2>
+         <h2>No More Questions.</h2>
         </Col>
+      }
+      {topThreeQuestions &&
+        <Col>
+         <h2>Questions</h2>
+        </Col>
+      }
       </Row>
       <Row>
         {topThreeQuestions && <Col>
