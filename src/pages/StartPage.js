@@ -1,5 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './StartPage.css';
-
 
 /**
  * StartPage
@@ -15,6 +15,7 @@ import './StartPage.css';
  * SalesAssistant => StartPage => StartButton
  */
 function StartPage() {
+  console.debug("inside StartPage");
   return (
     <div className="StartPage">
     StartPage
