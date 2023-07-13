@@ -15,8 +15,11 @@ import './Questions.css';
  * QuestionPage =>  Questions
  */
 function Questions() {
+  console.debug("Inside Questions");
+
   return (
     <div className="Questions">
+    Questions
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import './QuestionPage.css';
+import Questions from './Questions';
 
 
 /**
@@ -18,8 +19,11 @@ import './QuestionPage.css';
  * SalesAssistant => QuestionPage => { StartButton, SubmitButton, Questions }
  */
 function QuestionPage() {
+  console.debug("Inside QuestionPage");
   return (
     <div className="QuestionPage">
+    Question Page
+    <Questions />
     </div>
   );
 }

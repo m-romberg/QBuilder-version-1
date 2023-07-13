@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./Header";
 import StartPage from "./pages/StartPage";
 import ListeningPage from "./pages/ListeningPage";
+import QuestionPage from "./pages/QuestionPage/QuestionPage";
 
 /**
  * App
@@ -42,6 +43,7 @@ function App() {
       </Row>
       <Row>
         <Col>
+        <QuestionPage />
         </Col>
       </Row>
     </Container>
