@@ -1,10 +1,18 @@
 .Questions {
     color: whitesmoke;
     background-color: #929fae;
-    max-width: 50%;
+    max-width: 70%;
     border-radius: 25px;
 }
 
 .Questions-list{
     text-align: left;
+}
+
+.Questions ol {
+    color: whitesmoke;
+    background-color: #66798e;
+    border-radius: 25px;
+    font-weight: bolder;
+    font-size: large;
 }
