@@ -23,7 +23,9 @@ import SubmitButton from "../../buttons/SubmitButton";
 function QuestionPage({ questions, record, submit }) {
   console.debug("Inside QuestionPage");
 
-  const noQuestionMessage = "Please restart the sales assistant for additional questions OR request a final solution.";
+  const noQuestionMessage = "Please restart ".concat(
+    "the sales assistant for additional questions OR request a final solution."
+  );
 
   return (
     <Container className="QuestionPage">
