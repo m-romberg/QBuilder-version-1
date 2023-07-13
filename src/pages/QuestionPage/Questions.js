@@ -18,6 +18,7 @@ function Questions({ questions }) {
   console.debug("Inside Questions");
 
   const topThreeQuestions = questions?.slice(0, 3);
+  const noQuestionMessage = "No more questions. Please restart the sales assistant for additional questions or request a final solution."
 
   return (
     <Container className="Questions">
@@ -27,12 +28,16 @@ function Questions({ questions }) {
         </Col>
       </Row>
       <Row>
-        <Col>
+        {topThreeQuestions && <Col>
           <ol>
-            {topThreeQuestions &&
-              topThreeQuestions.map((q, i) => <li key={i}>{q}</li>)}
+            {topThreeQuestions.map((q, i) => <li key={i}>{q}</li>)}
           </ol>
         </Col>
+        }
+        {!topThreeQuestions && <Col>
+          {noQuestionMessage}
+        </Col>
+        }
       </Row>
     </Container>
   );
