@@ -1,8 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
-import RecordButton from "./buttons/RecordButton";
-import StopButton from "./buttons/StopButton";
-import SubmitButton from "./buttons/SubmitButton";
 import Header from "./Header";
 
 /**
@@ -43,9 +40,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <RecordButton record={record}/>
-        <StopButton stopRecord={stopRecord}/>
-        <SubmitButton requestSolution={requestSolution} />
         </Col>
       </Row>
     </Container>
