@@ -17,9 +17,11 @@ import './StartPage.css';
 function StartPage() {
   console.debug("inside StartPage");
   return (
-    <div className="StartPage">
-    StartPage
-    </div>
+    <Container className="StartPage">
+    <Row>
+    <Col>Start page</Col>
+    </Row>
+    </Container>
   );
 }
 
