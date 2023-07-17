@@ -26,6 +26,7 @@ function App() {
   function record() {
     console.debug("inside record");
     setIsRecording(true);
+    setQuestions(null);
   }
 
   /**Function to stop access microphone and send off recording to API */
@@ -63,7 +64,7 @@ function App() {
 
       {(questions != null) &&
         <Col>
-          <QuestionPage submit={requestSolution} />
+          <QuestionPage submit={requestSolution} record={record} />
         </Col>
       }
       </Row>
