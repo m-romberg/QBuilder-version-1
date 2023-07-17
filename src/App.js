@@ -22,6 +22,7 @@ function App() {
 
   const [isRecording, setIsRecording] = useState(false);
   const [questions, setQuestions] = useState(null);
+  const [solution, setSolution] = useState(null);
 
   /**Function to access microphone and start recording */
   function record() {
@@ -40,10 +41,14 @@ function App() {
   /**Function to request sales solution from QBuilder API */
   function requestSolution() {
     console.debug("inside requestSolution");
+    setSolution({timeline:"", cost:null, details:""});
+    setQuestions(null);
   }
 
   function restart () {
     console.debug("inside restart");
+    setQuestions(null);
+    setSolution(null);
   }
 
 
@@ -55,7 +60,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-      {!isRecording && !questions &&
+      {!isRecording && !questions && !solution &&
         <Col>
            <StartPage record={record} />
         </Col>
@@ -70,6 +75,17 @@ function App() {
       {(questions != null) &&
         <Col>
           <QuestionPage submit={requestSolution} record={record} />
+        </Col>
+      }
+
+      {(solution != null) &&
+        <Col>
+          <SolutionPage
+          timeline={solution.timeline}
+          cost={solution.cost}
+          details={solution.details}
+          restart={restart}
+          />
         </Col>
       }
       </Row>
