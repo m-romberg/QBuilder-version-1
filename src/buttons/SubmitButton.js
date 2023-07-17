@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './SubmitButton.css';
 
 /**
@@ -21,12 +22,13 @@ function SubmitButton({ requestSolution }) {
     <Container className="SubmitButton">
       <Row>
         <Col>
+        <Link to="/assistant/solution" onClick={requestSolution}>
           <Button
-          onClick={requestSolution}
           className="SubmitButton-button"
           >
             Request Sales Solution
           </Button>
+        </Link>
         </Col>
       </Row>
     </Container>

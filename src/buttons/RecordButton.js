@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './RecordButton.css';
 
 /**
@@ -20,13 +21,14 @@ function RecordButton({ record }) {
     <Container className="RecordButton" >
       <Row>
         <Col>
+          <Link to="/assistant/listening"  onClick={record}>
           <Button
-            onClick={record}
             className="RecordButton Button rounded-circle"
             variant="success"
             >
             Start Assistant
           </Button>
+          </Link>
         </Col>
       </Row>
     </Container>

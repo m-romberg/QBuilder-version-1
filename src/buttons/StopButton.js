@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './StopButton.css';
 
 /**
@@ -20,12 +21,13 @@ function StopButton({ stopRecord }) {
     <Container className="StopButton">
       <Row>
         <Col>
+        <Link to="/assistant/questions" onClick={stopRecord}>
           <Button
-            onClick={stopRecord}
             className="StopButton Button rounded-circle"
             variant="danger">
             Stop Assistant
           </Button>
+          </Link>
         </Col>
       </Row>
     </Container>
