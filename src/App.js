@@ -1,10 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
 import Header from "./Header";
-import StartPage from "./pages/StartPage";
-import ListeningPage from "./pages/ListeningPage";
-import QuestionPage from "./pages/QuestionPage/QuestionPage";
-import SolutionPage from "./pages/SolutionPage";
+import RoutesList from "./routes-nav/RoutesList";
+
 
 /**
  * App
@@ -20,21 +18,21 @@ function App() {
   console.debug("inside app");
 
   /**Function to access microphone and start recording */
-  function record () {
+  function record() {
     console.debug("inside record");
   }
 
   /**Function to stop access microphone and send off recording to API */
-  function stopRecord () {
+  function stopRecord() {
     console.debug("inside stopRecord");
   }
 
   /**Function to request sales solution from QBuilder API */
-  function requestSolution () {
+  function requestSolution() {
     console.debug("inside requestSolution");
   }
 
-  function restart () {
+  function restart() {
     console.debug("inside restart");
   }
 
@@ -48,6 +46,13 @@ function App() {
       </Row>
       <Row>
         <Col>
+          <RoutesList
+            record={record}
+            stopRecord={stopRecord}
+            submit={requestSolution}
+            restart={restart}
+            solution={{ solution: "test" }}
+            questions={["questions"]} />
         </Col>
       </Row>
     </Container>
