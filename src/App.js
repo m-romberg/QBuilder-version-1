@@ -5,6 +5,7 @@ import Header from "./Header";
 import StartPage from "./pages/StartPage";
 import ListeningPage from "./pages/ListeningPage";
 import QuestionPage from "./pages/QuestionPage/QuestionPage";
+import SolutionPage from "./pages/SolutionPage";
 
 /**
  * App
@@ -39,6 +40,10 @@ function App() {
   /**Function to request sales solution from QBuilder API */
   function requestSolution() {
     console.debug("inside requestSolution");
+  }
+
+  function restart () {
+    console.debug("inside restart");
   }
 
 
