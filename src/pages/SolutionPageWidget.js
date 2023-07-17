@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import './SolutionPage.css';
+import './SolutionPageWidget.css';
 
 /**
  * SolutionPageWidget
@@ -18,10 +18,10 @@ function SolutionPageWidget({ title, value }) {
   return (
     <Container className="SolutionPageWidget">
       <Row>
-        <Col>
-          <h3>{title.toUpperCase()}</h3>
+        <Col xs={6}>
+          <h3>{title.toUpperCase() + ":"}</h3>
         </Col>
-        <Col>
+        <Col  xs={6}>
           <p>{value}</p>
         </Col>
       </Row>
