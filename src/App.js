@@ -48,7 +48,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <SolutionPage />
         </Col>
       </Row>
     </Container>
