@@ -32,6 +32,7 @@ function App() {
   function stopRecord() {
     console.debug("inside stopRecord");
     setIsRecording(false);
+    setQuestions(["Sample Questions"]);
   }
 
   /**Function to request sales solution from QBuilder API */
@@ -48,7 +49,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-      {!isRecording &&
+      {!isRecording && !questions &&
         <Col>
            <StartPage record={record} />
         </Col>
