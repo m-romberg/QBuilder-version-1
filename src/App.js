@@ -4,6 +4,7 @@ import Header from "./Header";
 import StartPage from "./pages/StartPage";
 import ListeningPage from "./pages/ListeningPage";
 import QuestionPage from "./pages/QuestionPage/QuestionPage";
+import SolutionPage from "./pages/SolutionPage";
 
 /**
  * App
@@ -33,6 +34,10 @@ function App() {
     console.debug("inside requestSolution");
   }
 
+  function restart () {
+    console.debug("inside restart");
+  }
+
 
   return (
     <Container className="App d-grid gap-5">
@@ -43,7 +48,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <QuestionPage />
         </Col>
       </Row>
     </Container>
