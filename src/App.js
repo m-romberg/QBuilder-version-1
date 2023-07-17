@@ -43,7 +43,6 @@ function App() {
       </Row>
       <Row>
         <Col>
-        <QuestionPage />
         </Col>
       </Row>
     </Container>
