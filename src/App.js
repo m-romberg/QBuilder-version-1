@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import './App.css';
 import Header from "./Header";
@@ -19,17 +20,17 @@ function App() {
   console.debug("inside app");
 
   /**Function to access microphone and start recording */
-  function record () {
+  function record() {
     console.debug("inside record");
   }
 
   /**Function to stop access microphone and send off recording to API */
-  function stopRecord () {
+  function stopRecord() {
     console.debug("inside stopRecord");
   }
 
   /**Function to request sales solution from QBuilder API */
-  function requestSolution () {
+  function requestSolution() {
     console.debug("inside requestSolution");
   }
 
@@ -42,6 +43,13 @@ function App() {
         </Col>
       </Row>
       <Row>
+        <Col>
+          <StartPage record={record} />
+        </Col>
+        <ListeningPage stopRecord={stopRecord} />
+        <Col>
+        </Col>
+        <QuestionPage submit={requestSolution} />
         <Col>
         </Col>
       </Row>
