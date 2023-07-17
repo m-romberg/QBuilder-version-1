@@ -1,18 +1,19 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './RestartButton.css';
 
 /**
- * RecordButton
+ * RestartButton
  *
- * Starts audio recording
+ * Go back to home and calls fn that resets sale assistant
  *
  * props:
- *    - record: fn to start recording audio
+ *    - restart: fn to restart assistant
  *
  * state:
  *    - none
  *
- * {StartPage, QuestionsPage} => RecordButton
+ * {SolutionPage} => RestartButton
  */
 function RestartButton({ restart }) {
   console.debug("inside RecordButton");
@@ -20,13 +21,14 @@ function RestartButton({ restart }) {
     <Container className="RestartButton" >
       <Row>
         <Col>
+        <Link to="/assistant/start" onClick={restart}>
           <Button
-            onClick={restart}
             className="RestartButton Button rounded-circle"
             variant="secondary"
             >
             Back to Home
           </Button>
+        </Link>
         </Col>
       </Row>
     </Container>
