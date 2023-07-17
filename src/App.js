@@ -19,14 +19,19 @@ import QuestionPage from "./pages/QuestionPage/QuestionPage";
 function App() {
   console.debug("inside app");
 
+  const [isRecording, setIsRecording] = useState(false);
+  const [questions, setQuestions] = useState(null);
+
   /**Function to access microphone and start recording */
   function record() {
     console.debug("inside record");
+    setIsRecording(true);
   }
 
   /**Function to stop access microphone and send off recording to API */
   function stopRecord() {
     console.debug("inside stopRecord");
+    setIsRecording(false);
   }
 
   /**Function to request sales solution from QBuilder API */
@@ -43,15 +48,23 @@ function App() {
         </Col>
       </Row>
       <Row>
+      {!isRecording &&
         <Col>
-          <StartPage record={record} />
+           <StartPage record={record} />
         </Col>
-        <ListeningPage stopRecord={stopRecord} />
+      }
+
+      {isRecording &&
         <Col>
+          <ListeningPage stopRecord={stopRecord} />
         </Col>
-        <QuestionPage submit={requestSolution} />
+      }
+
+      {(questions != null) &&
         <Col>
+          <QuestionPage submit={requestSolution} />
         </Col>
+      }
       </Row>
     </Container>
   );
