@@ -1,5 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './SolutionPage.css';
-
 
 /**
  * SolutionPage
@@ -17,8 +17,12 @@ import './SolutionPage.css';
  */
 function SolutionPage() {
   return (
-    <div className="SolutionPage">
-    </div>
+    <Container className="SolutionPage">
+      <Row>
+        <Col>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
