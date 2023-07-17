@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import './RestartButton.css';
 
 /**
- * RecordButton
+ * RestartButton
  *
- * Starts audio recording
+ * Go back to home and calls fn that resets sale assistant
  *
  * props:
- *    - record: fn to start recording audio
+ *    - restart: fn to restart assistant
  *
  * state:
  *    - none
  *
- * {StartPage, QuestionsPage} => RecordButton
+ * {SolutionPage} => RestartButton
  */
 function RestartButton({ restart }) {
   console.debug("inside RecordButton");
