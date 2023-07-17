@@ -1,5 +1,8 @@
+import { Container, Row, Col } from "react-bootstrap";
 import './QuestionPage.css';
-
+import Questions from './Questions';
+import RecordButton from "../../buttons/RecordButton";
+import SubmitButton from "../../buttons/SubmitButton";
 
 /**
  * QuestionPage
@@ -17,10 +20,35 @@ import './QuestionPage.css';
  *
  * SalesAssistant => QuestionPage => { StartButton, SubmitButton, Questions }
  */
-function QuestionPage() {
+function QuestionPage({ questions, record, submit }) {
+  console.debug("Inside QuestionPage");
+
+  const prompt = "Please restart ".concat(
+    "the sales assistant for additional questions OR request a final solution."
+  );
+
   return (
-    <div className="QuestionPage">
-    </div>
+    <Container className="QuestionPage d-grid gap-5">
+      <Row className="QuestionPage-questions">
+        <Col>
+          <Questions questions={questions} />
+        </Col>
+      </Row>
+        <Row className="QuestionPage-prompt"> <Col>
+          {prompt}
+        </Col>
+        </Row>
+      <Row>
+      <Col></Col>
+        <Col>
+          <RecordButton record={record} />
+        </Col>
+        <Col>
+          <SubmitButton requestSolution={submit} />
+        </Col>
+        <Col></Col>
+      </Row>
+    </Container>
   );
 }
 
