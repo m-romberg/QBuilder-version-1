@@ -34,7 +34,9 @@ function App() {
     console.debug("inside requestSolution");
   }
 
-
+  function restart () {
+    console.debug("inside restart");
+  }
 
 
   return (
