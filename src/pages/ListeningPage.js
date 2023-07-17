@@ -26,7 +26,7 @@ function ListeningPage({ stopRecord }) {
         <Col> {prompt} </Col>
       </Row>
       <Row className="ListeningPage ListeningPage-btns p-2">
-        <Col> <StopButton /> </Col>
+        <Col> <StopButton stopRecord={stopRecord} /> </Col>
       </Row>
     </Container>
   );
