@@ -15,7 +15,7 @@ import './SolutionPage.css';
  *    - none
  * SalesAssistant => SolutionPage
  */
-function SolutionPage() {
+function SolutionPage({ timeline, cost, details }) {
   return (
     <Container className="SolutionPage">
       <Row>
